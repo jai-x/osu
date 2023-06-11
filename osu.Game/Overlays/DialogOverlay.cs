@@ -99,13 +99,11 @@ namespace osu.Game.Overlays
 
         protected override void PopIn()
         {
-            base.PopIn();
             lowPassFilter.CutoffTo(300, 100, Easing.OutCubic);
         }
 
         protected override void PopOut()
         {
-            base.PopOut();
             lowPassFilter.CutoffTo(AudioFilter.MAX_LOWPASS_CUTOFF, 100, Easing.InCubic);
 
             // PopOut gets called initially, but we only want to hide dialog when we have been loaded and are present.

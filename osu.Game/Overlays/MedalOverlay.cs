@@ -246,11 +246,9 @@ namespace osu.Game.Overlays
             }
         }
 
-        protected override void PopOut()
-        {
-            base.PopOut();
-            this.FadeOut(200);
-        }
+        protected override void PopIn() => this.FadeIn(200);
+
+        protected override void PopOut() => this.FadeOut(200);
 
         private void dismiss()
         {

@@ -90,7 +90,6 @@ namespace osu.Game.Overlays
 
         protected override void PopIn()
         {
-            base.PopIn();
             this.FadeIn(transition_time, Easing.OutQuint);
 
             if (welcomeScreen.GetChildScreen() != null)
@@ -102,11 +101,7 @@ namespace osu.Game.Overlays
             scheduledHide = null;
         }
 
-        protected override void PopOut()
-        {
-            base.PopOut();
-            this.FadeOut(100);
-        }
+        protected override void PopOut() => this.FadeOut(100);
 
         private ScheduledDelegate scheduledHide;
 

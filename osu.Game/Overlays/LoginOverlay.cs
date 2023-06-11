@@ -75,8 +75,6 @@ namespace osu.Game.Overlays
 
         protected override void PopIn()
         {
-            base.PopIn();
-
             panel.Bounding = true;
             this.FadeIn(transition_time, Easing.OutQuint);
 
@@ -85,8 +83,6 @@ namespace osu.Game.Overlays
 
         protected override void PopOut()
         {
-            base.PopOut();
-
             panel.Bounding = false;
             this.FadeOut(transition_time);
         }

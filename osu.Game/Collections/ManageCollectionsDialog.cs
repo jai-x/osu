@@ -114,8 +114,6 @@ namespace osu.Game.Collections
 
         protected override void PopIn()
         {
-            base.PopIn();
-
             lowPassFilter.CutoffTo(300, 100, Easing.OutCubic);
             this.FadeIn(enter_duration, Easing.OutQuint);
             this.ScaleTo(0.9f).Then().ScaleTo(1f, enter_duration, Easing.OutQuint);
@@ -123,8 +121,6 @@ namespace osu.Game.Collections
 
         protected override void PopOut()
         {
-            base.PopOut();
-
             lowPassFilter.CutoffTo(AudioFilter.MAX_LOWPASS_CUTOFF, 100, Easing.InCubic);
 
             this.FadeOut(exit_duration, Easing.OutQuint);

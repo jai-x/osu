@@ -276,16 +276,12 @@ namespace osu.Game.Overlays
 
         protected override void PopIn()
         {
-            base.PopIn();
-
             this.MoveToY(0, transition_length, Easing.OutQuint);
             this.FadeIn(transition_length, Easing.OutQuint);
         }
 
         protected override void PopOut()
         {
-            base.PopOut();
-
             this.MoveToY(Height, transition_length, Easing.InSine);
             this.FadeOut(transition_length, Easing.InSine);
 

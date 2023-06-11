@@ -206,8 +206,6 @@ namespace osu.Game.Overlays
 
         protected override void PopIn()
         {
-            base.PopIn();
-
             this.MoveToX(0, TRANSITION_LENGTH, Easing.OutQuint);
             mainContent.FadeTo(1, TRANSITION_LENGTH, Easing.OutQuint);
             mainContent.FadeEdgeEffectTo(WaveContainer.SHADOW_OPACITY, WaveContainer.APPEAR_DURATION, Easing.Out);
@@ -217,8 +215,6 @@ namespace osu.Game.Overlays
 
         protected override void PopOut()
         {
-            base.PopOut();
-
             markAllRead();
 
             this.MoveToX(WIDTH, TRANSITION_LENGTH, Easing.OutQuint);
